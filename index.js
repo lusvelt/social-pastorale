@@ -12,7 +12,7 @@ const router = require('./server/config/router');
 const passportJwtStrategy = require('./server/auth/strategies/passportJwt');
 
 const rootPath = __dirname;
-const distPath = path.join(rootPath, 'dist');
+const distPath = path.join(rootPath, 'public/dist');
 const port = process.env.PORT;
 
 const app = express();

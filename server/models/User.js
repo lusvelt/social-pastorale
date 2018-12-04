@@ -7,12 +7,10 @@ const sequelize = require('../config/sequelize');
 const { saltRounds } = require('../config/params');
 
 const User = sequelize.define('User', {
-    name: { type: Sequelize.STRING, allowNull: false },
-    surname: { type: Sequelize.STRING, allowNull: false },
-    birthDate: { type: Sequelize.DATE, allowNull: true },
+    username: { type: Sequelize.STRING, allowNull: false, unique: true },
     email: { type: Sequelize.STRING, allowNull: false, unique: true },
     password: { type: Sequelize.STRING, allowNull: false },
-    isAdmin: { type: Sequelize.BOOLEAN, allowNull: false, defaultValue: 0 }
+    isMod: { type: Sequelize.BOOLEAN, allowNull: false, defaultValue: 0 }
 });
 
 User.beforeCreate((user, options) => {

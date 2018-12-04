@@ -1,11 +1,13 @@
 {
-  "name": "node-mysql-template",
+  "name": "social-pastorale",
   "version": "1.0.0",
-  "description": "Simple starting template for back-end API projects using node.js and MySQL",
+  "description": "Social della Pastorale Giovanile di Pescara",
   "main": "index.js",
   "scripts": {
     "start": "node index",
     "watch": "nodemon index",
+    "serve": "cd public && gulp serve",
+    "postinstall": "cd public && npm install && npm audit fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -30,6 +32,7 @@
     "jsonwebtoken": "^8.4.0",
     "lodash": "^4.17.11",
     "mysql2": "^1.6.4",
+    "nodemailer": "^4.7.0",
     "parse-db-uri": "^1.0.2",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
